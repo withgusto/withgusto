@@ -1,5 +1,5 @@
-body, html { margin: 0; padding: 0; }
+body, html { margin: 0px; padding: 0; }
 
-body { font-family: Helvetica, sans-serif; color: black; background: white; }
+body { font-family: Helvetica, sans-serif; color: black; background: #ffff00; }
 a { color: black; }
 a:hover { color: red; }
