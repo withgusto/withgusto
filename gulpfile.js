@@ -17,6 +17,26 @@ gulp.task('styles', function () {
         .pipe($.size());
 });
 
+// var compass = require('gulp-compass');
+//
+// var paths = {
+//   styles: {
+//     src:  'app/css/*.sass',
+//     dest: 'public/stylesheets'
+//   }
+// };
+//
+// gulp.task('sass', function () {
+//   return gulp.src(paths.styles.src)
+//     .pipe(compass({
+//       config_file: './config.rb',
+//       css: 'stylesheets',
+//       sass: 'sass'
+//     }))
+//     .pipe(gulp.dest(paths.styles.dest));
+// });
+
+
 gulp.task('scripts', function () {
     return gulp.src('app/scripts/**/*.js')
         .pipe($.jshint())
