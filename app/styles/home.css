@@ -1,0 +1,207 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+/*  font-family: Monaco, Consolas, "Lucida Console", monospace;*/
+  background-color: #c1e1ee;
+}
+
+.container {
+  padding: 20px 0 0 0;
+  width:800px;
+  margin: 0 auto;
+}
+
+#firstImage{
+  background-position: center center;
+  background-image: url('../../images/beyond1.jpg');
+}
+
+.item {
+  opacity: 0;
+/*  -webkit-transform: scale(0.8);*/
+  cursor: pointer;
+  float: left;
+  width: 180px;
+  height: 180px;
+  border:solid 1px #000;
+  background: #fff;
+
+  -webkit-transition: all .15s ease-in-out;
+}
+.item:active { -webkit-transform: scale(1.0); }
+.item:hover { -webkit-transform: scale(0.98); }
+
+.item h1 {
+  display:none;
+  width: 100%;
+  background-color: #000;
+  padding: 10px 10px 10px 14px;
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight:400;
+}
+
+
+.item.w2 { width:  380px; }
+.item.h2 { height: 380px; }
+.item.w4 { width:  580px; }
+.item.h4 { height: 580px; }
+
+.fluid {
+/*  width: 50%;*/
+}
+
+.has-padding {
+/*  padding: 10px 20px 30px 40px;*/
+}
+
+/* dragging */
+.is-dragging,
+.is-positioning-post-drag,
+.ui-draggable-dragging {
+  z-index: 10;
+  background: orange;
+}
+
+
+
+  @media (min-width: 200px) and (max-width: 640px) {
+    body{
+
+      background: #c1e1ee;
+    }
+    .container{
+      width:400px;
+      margin: 0 auto;
+    }
+
+    .item.w2 { width:  180px; }
+    .item.h2 { height: 180px; }
+    .item.w4 { width:  380px; }
+    .item.h4 { height: 380px; }
+  }
+
+
+  @media (min-width: 640px) and (max-width: 800px) {
+    .container{
+      width:580px;
+      margin: 0 auto;
+    }
+    .top-bar{
+      width:600px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: 800px) and (max-width: 1000px) {
+    .container{
+      width:800px;
+      margin: 0 auto;
+    }
+    .top-bar{
+      width:820px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: 1000px) and (max-width: 1400px) {
+    .container{
+      width:980px;
+      margin: 0 auto;
+    }
+    .top-bar{
+      width:990px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: 1400px) and (max-width: 8000px) {
+    .container{
+      width: 1180px;
+      margin: 0 auto;
+    }
+    .top-bar{
+      width:1200px;
+      margin: 0 auto;
+    }
+  }
+
+
+/* Top bar  */
+
+.top-bar{
+  background:#fff;
+  height:100px;
+}
+
+div.fixed {background:#fff;}
+
+.top-bar {
+  padding: 20px 10px 10px 0px;
+}
+
+.top-bar .name h1 a  {
+  color:#333;
+}
+
+.top-bar .title-area {
+  float: left;
+  padding: 10px;
+}
+
+.top-bar-section ul {
+  background:transparent;
+}
+
+.top-bar-section li.active:not(.has-form) a:not(.button) {
+  color: #999;
+  background: #fff;
+}
+
+.top-bar-section li.active:not(.has-form) a:not(.button):hover {
+  color: #000;
+  background: #fff;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  color: #666;
+  background: #fff;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button):hover{
+  color: #000;
+  background: #fff;
+}
+
+.top-bar li {
+  margin: 10px;
+}
+
+
+footer p {
+  color:#999;
+  font-size: 0.8125rem;
+}
+
+footer li {
+  font-size: 0.8125rem;
+}
+
+footer li a{
+  color:#999;
+}
+
+footer li a:hover{
+  color:#000;
+}
