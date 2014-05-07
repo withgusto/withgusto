@@ -1,6 +1,3 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
 
 * {
@@ -9,14 +6,14 @@
           box-sizing: border-box;
 }
 
+@include sticky-footer(72px, "#layout", "#layout_footer", "#footer");
+
 body {
-    font-family: sans-serif;
-/*  font-family: Monaco, Consolas, "Lucida Console", monospace;*/
-  background-color: #c1e1ee;
+  overflow-x: hidden;
 }
 
 .container {
-  padding: 20px 0 0 0;
+  padding: 140px 0 20px 0;
   width:800px;
   margin: 0 auto;
 }
@@ -35,11 +32,9 @@ body {
   height: 180px;
   border:solid 1px #000;
   background: #fff;
-
-  -webkit-transition: all .15s ease-in-out;
 }
-.item:active { -webkit-transform: scale(1.0); }
-.item:hover { -webkit-transform: scale(0.98); }
+.item:active { -webkit-transform: scale(1.0);  -webkit-transition: all .15s ease-in-out; }
+.item:hover { -webkit-transform: scale(0.98);  -webkit-transition: all .15s ease-in-out;}
 
 .item h1 {
   display:none;
@@ -52,19 +47,10 @@ body {
   font-weight:400;
 }
 
-
 .item.w2 { width:  380px; }
 .item.h2 { height: 380px; }
 .item.w4 { width:  580px; }
 .item.h4 { height: 580px; }
-
-.fluid {
-/*  width: 50%;*/
-}
-
-.has-padding {
-/*  padding: 10px 20px 30px 40px;*/
-}
 
 /* dragging */
 .is-dragging,
@@ -73,14 +59,8 @@ body {
   z-index: 10;
   background: orange;
 }
-
-
-
   @media (min-width: 200px) and (max-width: 640px) {
-    body{
 
-      background: #c1e1ee;
-    }
     .container{
       width:400px;
       margin: 0 auto;
@@ -137,11 +117,41 @@ body {
     }
   }
 
+.intro{
+  background:#777;
+  visibility:hidden;
+  width : 700px;
+  margin: 0 auto;
+  padding: 0px 80px 20px 80px;
+}
+
+
+.hero{
+  width: 100%;
+}
+
+/*  about */
+
+.about {
+  background:#666;
+  visibility:hidden;
+  width : 600px;
+  margin: 0 auto;
+  padding: 0px 40px 0px 40px;
+  margin: 0px 0px 0px 0px;
+}
+
+/*  contact */
+
+.contact{
+  margin: 40px 0px 20px 0px;
+  padding: 10px 0px 20px 0px;
+}
 
 /* Top bar  */
 
 .top-bar{
-  background:#fff;
+  background:transparent;
   height:100px;
 }
 
