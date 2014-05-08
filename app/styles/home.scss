@@ -1,17 +1,6 @@
 
 @import "variables";
 
-* {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  overflow-x: hidden;
-}
-
-
 /* intro */
 
 #intro {
@@ -23,8 +12,8 @@ body {
   visibility:hidden;
   width : 740px;
   margin: 0 auto;
-  padding: 0px 80px 20px 80px;
-  margin-top: 100px;
+  padding: 200px 80px 20px 80px;
+
 
   a, a:hover{
     color:#000;
@@ -41,7 +30,7 @@ body {
 
 .about {
   visibility:hidden;
-  width : 60px;
+  width : 600px;
   margin: 0 auto;
   padding: 0px 40px 0px 40px;
   margin-top: -120px;
@@ -107,12 +96,12 @@ body {
 @media #{$desktop-small-query} {
 
   .intro{
-    width:600px;
+    width:620px;
     margin: 0 auto;
   }
 
   .about{
-    width:560px;
+    width:580px;
     margin: 0 auto;
   }
 
@@ -124,9 +113,56 @@ body {
 }
 
 @media #{$desktop-medium-query} {
+  .intro{
+    width:620px;
+    margin: 0 auto;
+  }
 
+  .about{
+    width:580px;
+    margin: 0 auto;
+  }
+
+  .lab{
+    width:540px;
+    margin: 0 auto;
+  }
 }
 
 @media #{$desktop-large-query} {
+
+  .intro{
+    width:740px;
+    margin: 0 auto;
+  }
+
+  .about{
+    width:640px;
+    margin: 0 auto;
+  }
+
+  .lab{
+    width:680px;
+    margin: 0 auto;
+  }
+
+}
+
+@media #{$desktop-huge-query} {
+
+  .intro{
+    width:800px;
+    margin: 0 auto;
+  }
+
+  .about{
+    width:800px;
+    margin: 0 auto;
+  }
+
+  .lab{
+    width:800px;
+    margin: 0 auto;
+  }
 
 }
