@@ -7,6 +7,10 @@
 
 @mixin link-hover-state ($color){
   border-bottom: 2px solid ($color);
+
+  // -webkit-text-stroke-width: 1px;
+  // -webkit-text-stroke-color: $body-bg;
+  // -webkit-text-fill-color: white;
 }
 
 

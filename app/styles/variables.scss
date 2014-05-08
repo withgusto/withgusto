@@ -11,3 +11,20 @@ $alert-color: #c60f13 !default;
 $success-color: #5da423 !default;
 
 $global-radius: 3px !default;
+
+// Media Queries
+$iphone-query: "all and (max-width: 480px)"; // Only width, not device width
+$small-query: "all and (max-width: 660px)";
+
+$ipad-query-retina: "only screen and (min-device-width: 1536px) and (max-device-width: 2048px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 2)";
+
+$retina-query: "only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) only screen and (max-width: 1048px)";
+
+$ipad-query: "all and (max-width: 1048px)"; // Only width, not device width
+$ipad-query-portrait: "all and (max-width: 768px)"; // Only width, not device width
+
+$desktop-tiny-query: "all and (min-width: 200px) and (max-width: 640px)";
+$desktop-small-query: "all and (min-width: 640px) and (max-width: 800px)";
+$desktop-medium-query: "all and (min-width: 800px) and (max-width: 1040px)";
+$desktop-large-query: "all and (min-width: 1040px) and (max-width: 1400px)";
+$desktop-huge-query: "all and (min-width: 1400px) and (max-width: 8000px)";
