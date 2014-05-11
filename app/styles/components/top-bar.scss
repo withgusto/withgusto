@@ -57,12 +57,12 @@ div.fixed {background:#fff;}
 
 .top-bar-section li.active:not(.has-form) a:not(.button) {
   border-bottom: 2px solid transparent;
-  -webkit-transition: all .15s ease-in-out;
+  @include transition( all .15s ease-in-out);
   padding: 0 2px 0 2px;
 }
 
 .top-bar-section li.active:not(.has-form) a:not(.button):hover {
-  -webkit-transition: all .15s ease-in-out;
+  @include transition( all .15s ease-in-out);
   @include link-hover-state(#222);
   color:#222;
 }

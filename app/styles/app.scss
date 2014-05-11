@@ -116,14 +116,14 @@ $h2-font-size: rem-calc(37);
 $h3-font-size: rem-calc(27);
 $h4-font-size: rem-calc(23);
 $h5-font-size: rem-calc(18);
-$h6-font-size: 1rem;
+$h6-font-size: 1.2rem;
 
 //These control how subheaders are styled.
 $subheader-line-height: 1.2;
 $subheader-font-color: scale-color($header-font-color, $lightness: 35%);
 $subheader-font-weight: 300;
 $subheader-top-margin: .2rem;
-$subheader-bottom-margin: .5rem;
+$subheader-bottom-margin: 1.0rem;
 
 // A general <small> styling
 // $small-font-size: 60%;
@@ -132,7 +132,7 @@ $subheader-bottom-margin: .5rem;
 // We use these to style paragraphs
 // $paragraph-font-family: inherit;
 // $paragraph-font-weight: normal;
-// $paragraph-font-size: 1rem;
+$paragraph-font-size: 1.4rem;
 // $paragraph-line-height: 1.6;
 // $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);

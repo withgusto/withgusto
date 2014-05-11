@@ -8,12 +8,11 @@
 
 #firstImage{
   background-position: center center;
-  background-image: url('../../images/beyond1.jpg');
+  background-image: url('');
 }
 
 .item {
   opacity: 0;
-/*  -webkit-transform: scale(0.8);*/
   cursor: pointer;
   float: left;
   width: 180px;
@@ -21,8 +20,15 @@
   border:solid 1px #000;
   background: #fff;
 }
-.item:active { -webkit-transform: scale(1.0);  -webkit-transition: all .15s ease-in-out; }
-.item:hover { -webkit-transform: scale(0.98);  -webkit-transition: all .15s ease-in-out;}
+.item:active {
+   @include transform( scale(1.0) );
+   @include transition( all .15s ease-in-out);
+ }
+
+.item:hover {
+  @include transform( scale(0.98));
+  @include transition( all .15s ease-in-out);
+}
 
 .item h1 {
   display:none;

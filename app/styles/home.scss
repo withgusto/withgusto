@@ -25,7 +25,7 @@
 
 #about {
   visibility:hidden;
-  // @include cover('/images/tum95-1.jpg');
+  // @include cover('/images/image.jpg');
 }
 
 .about {
@@ -44,15 +44,6 @@
     color:#000;
     @include link-hover-state(#000);
   }
-}
-
-/* about all */
-.about-all{
-  float:left;
-}
-
-.about-container{
-  width:2000px;
 }
 
 /* lab */
