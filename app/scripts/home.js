@@ -1,28 +1,15 @@
 
-function appendRandomSizedItems( container ) {
-  var frag = document.createDocumentFragment();
-  for ( var i=0; i < 35; i++ ) {
-    var item = document.createElement('div');
-    item.className = 'item';
-    var w = Math.floor( Math.random() * Math.random() * 180 ) + 20;
-    var h = Math.floor( Math.random() * Math.random() * 180 ) + 20;
-    item.style.width  = w + 'px';
-    item.style.height = h + 'px';
-    frag.appendChild( item );
-  }
-
-  container.appendChild( frag );
-}
-
 var $container = $('.container');
 
 (function() {
 
-  addItem( {id:'firstImage', image:'../../images/beyond1.jpg' } );
+  window.scrollTo( 0, 0 );
+
+  addItem( {id:'firstImage', image:'' } );
 
   var $firstImage = $('#firstImage');
 
-  var ex4 = document.getElementById('work');
+  var ex4 = document.getElementById('projects');
   var packery = new Packery( ex4 ,{gutter:20, transitionDuration:'0s'});
 
   packery.on( 'layoutComplete', function() {
@@ -41,6 +28,7 @@ var $container = $('.container');
     handleResize($( window ).width(), $( window ).height() );
   });
 
+
   showElements();
   // initialisePushState();
 
@@ -53,36 +41,39 @@ var $container = $('.container');
 
     // setPushState( {title:targetID, href:targetID} );
 
-    scrollToSection( targetID );
-
+    scrollToSection( targetID, 600, null );
   });
 
 })();
 
 var currentSection = 'intro';
 
-function alignSection(section) {
-  var diff = 100;
+function scrollToSection(section, time, callback) {
+
+  var diff = 90;
+  var ease = 'easeInOutQuart';
+
+  if( time === 0.5 ){
+    ease = 'linear';
+  }
+
   if( section === 'work' ){  diff = 0; }
-  $( '#' + section).velocity("scroll", { duration:0.1, easing:'easeInOutQuart', offset:-diff } );
-}
+  else if ( section === 'about' ){ diff = 70 }
+  else if ( section === 'projects' ){ diff = 0 }
 
-function scrollToSection(section) {
+  $( '#' + section).velocity("scroll", {  duration:time,
+                                          easing:ease, offset:-diff,
+                                          complete: onComplete(callback)
+                                        });
 
-  console.log('scrollToSection', section);
-  var diff = 80;
-  if( section === 'work' ){  diff = 0; }else if ( section === 'about' ){ diff = 70 }
-
-  $( '#' + section).velocity("scroll", { duration:600, easing:'easeInOutQuart', offset:-diff } );
+  function onComplete(callback) {
+    if (callback && typeof(callback) === "function") {
+      callback();
+    }
+  }
 }
 
 function showElements() {
-
-  // $( '.fixed').velocity( {top:0, duration:200, easing:'easeOutQuart' }, {} );
-  // $( '.top-bar').velocity( {top:0, duration:200, easing:'easeOutQuart' } ,{
-  //   complete: function() {
-  //   }
-  // });
 
   $('.intro').css( { 'visibility': 'visible'} );
   $('.about').css( { 'visibility': 'visible'} );
@@ -95,13 +86,13 @@ function showElements() {
 
 function handleResize(w, h) {
 
-  var centerValue = ( (h / 2) - 140 )+ 'px';
+  var centerValue = ( (h / 2) - 130 );
 
-  $('.intro').css( { 'height': (h ) + 'px' , 'padding-top': centerValue } );
-  $('.about').css( { 'height': (h ) + 'px' , 'padding-top': centerValue } );
-  $('.lab').css( { 'height': (h ) + 'px' , 'padding-top': centerValue } );
+  $('.intro').css( { 'height': (h ) + 'px' , 'padding-top': (centerValue +100)+ 'px'} );
+  $('.about').css( { 'height': (h ) + 'px' , 'padding-top': centerValue + 'px'} );
+  $('.lab').css( { 'height': (h ) + 'px' , 'padding-top': centerValue + 'px'} );
 
-  alignSection( currentSection );
+  scrollToSection( currentSection, 0.5 ,null );
 }
 
 function addItem(data) {
