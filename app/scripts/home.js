@@ -10,15 +10,23 @@ var $container = $('.container');
   var $firstImage = $('#firstImage');
 
   var ex4 = document.getElementById('projects');
-  var packery = new Packery( ex4 ,{gutter:20, transitionDuration:'0s'});
+  // var packery = new Packery( ex4 ,{gutter:20, transitionDuration:'0s'});
 
-  packery.on( 'layoutComplete', function() {
-    $( ".container .item" ).each(function( index ) {
-      TweenLite.to( $(this), .4, {delay:.06 * index, opacity:1, scale:1 , ease:Quad.easeInOut } );
-    });
-  } );
+  // packery.on( 'layoutComplete', function() {
+  //   $( ".container .item" ).each(function( index ) {
+  //     TweenLite.to( $(this), .4, {delay:.06 * index, opacity:1, scale:1 , ease:Quad.easeInOut } );
+  //   });
+  // } );
+  //
+  // packery.layout();
 
-  packery.layout();
+$(".main").onepage_scroll({
+  sectionContainer: "section",
+  responsiveFallback: 600,
+  loop: false,
+   easing: "cubic-bezier(0.770, 0.000, 0.175, 1.000)",
+   animationTime: 800,
+});
 
   handleResize($( window ).width(), $( window ).height() );
 
@@ -37,11 +45,14 @@ var $container = $('.container');
     event.preventDefault();
 
     var targetID = event.target.href.split('#')[1];
+    var dataSection = $(event.target).data('section');
+
     currentSection = targetID;
 
     // setPushState( {title:targetID, href:targetID} );
+    // scrollToSection( targetID, 600, null );
 
-    scrollToSection( targetID, 600, null );
+    $(".main").moveTo(dataSection);
   });
 
 })();
@@ -88,11 +99,11 @@ function handleResize(w, h) {
 
   var centerValue = ( (h / 2) - 130 );
 
-  $('.intro').css( { 'height': (h ) + 'px' , 'padding-top': (centerValue +100)+ 'px'} );
-  $('.about').css( { 'height': (h ) + 'px' , 'padding-top': centerValue + 'px'} );
-  $('.lab').css( { 'height': (h ) + 'px' , 'padding-top': centerValue + 'px'} );
+  // $('.intro').css( { 'height': (h ) + 'px' , 'padding-top': (centerValue +100)+ 'px'} );
+  // $('.about').css( { 'height': (h ) + 'px' , 'padding-top': centerValue + 'px'} );
+  // $('.lab').css( { 'height': (h ) + 'px' , 'padding-top': centerValue + 'px'} );
 
-  scrollToSection( currentSection, 0.5 ,null );
+  // scrollToSection( currentSection, 0.5 ,null );
 }
 
 function addItem(data) {

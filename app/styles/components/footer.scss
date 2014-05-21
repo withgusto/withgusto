@@ -1,3 +1,11 @@
+footer {
+  visibility:hidden;
+  position: fixed;
+
+  z-index:10;
+  bottom: 0px;
+}
+
 footer a{
 
   font-size: 1.0rem;

@@ -1,158 +1,130 @@
-<!-- cap deploy -->
 <!doctype html>
-<html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
 
-        <!-- build:css styles/vendor.css -->
-        <!-- bower:css -->
-        <!-- endbower -->
-        <!-- endbuild -->
+  <meta name="title" content="" />
+  <meta name="description" content="" />
 
-        <!-- build:css styles/main.css -->
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
 
-        <script type="text/javascript" src="http://fast.fonts.net/jsapi/9fb1e0b8-c365-45ae-8668-9e7220524892.js"></script>
+  <!-- build:css styles/main.css -->
 
-        <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="bower_components/modernizr/modernizr.js"></script>
-        <!-- endbuild -->
-    </head>
-    <body>
+  <link rel="stylesheet" href="styles/main.css">
+  <link href='styles/vendor/onepage-scroll.css' rel='stylesheet' type='text/css'>
 
-    <!--[if lt IE 10]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+  <!-- endbuild -->
 
-    <div class="fixed">
-      <nav class="top-bar">
-        <ul class="title-area">
-            <li class="logo active"><a href="#intro">With Gusto</a></li>
-          </ul>
-        <section class="top-bar-section">
-          <ul class="right">
-            <li class="active"><a href="#about">About</a></li>
-            <li class="active"><a href="#lab">Lab</a></li>
-            <li class="active"><a href="#projects">Projects</a></li>
-          </ul>
-        </section>
-      </nav>
+  <!-- typeface -->
+  <script type="text/javascript" src="http://fast.fonts.net/jsapi/9fb1e0b8-c365-45ae-8668-9e7220524892.js"></script>
+
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+
+  <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+</head>
+<body>
+
+  <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <div class="fixed">
+    <nav class="top-bar">
+      <ul class="title-area">
+          <li class="logo active"><a href="#intro" data-section="1">With Gusto</a></li>
+        </ul>
+      <div class="top-bar-section">
+        <ul class="right">
+          <li class="active"><a href="#about" data-section="2">About</a></li>
+          <li class="active"><a href="#lab" data-section="3">Lab</a></li>
+          <li class="active"><a href="#projects" data-section="4">Projects</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+  <div class="wrapper">
+
+    <div class="main">
+
+      <section class="page1"  id="intro">
+        <div class="page_container">
+
+          <div class="intro small-centered columns">
+            <h2>With Gusto is a studio working at the intersection of human interaction, <a href="#projects">technology</a> & design</h2>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="page2"  id="about">
+        <div class="page_container">
+
+          <div class="about small-centered columns" >
+            <h2>In the past we've worked for global advertising agencies, creating highly successful work for some of the world's greatest brands, read all about us <a href="#about-extended">here</a></h2>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="page3"  id="lab">
+        <div class="page_container">
+
+          <div class="lab small-centered columns" >
+            <h2>Our mission is to leverage technology in helping our clients build their brand stronger, see our latest thoughts <a href="">here</a></h2>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="page4 container" id="projects">
+        <div class="page_container">
+
+        </div>
+      </section>
+
+
     </div>
 
-    <section id="intro">
-      <div class="intro small-centered columns">
-        <h2>With Gusto is a studio working at the intersection of human interaction, <a href="#projects">technology</a> & design</h2>
-      </div>
-    </section>
+  </div>
 
-    <section id="about">
-
-      <div class="about small-centered columns" >
-        <h2>In the past we've worked for global advertising agencies, creating highly successful work for some of the world's greatest brands, read all about us <a href="#about-extended">here</a></h2>
-      </div>
-
-    </section>
-
-    <section id="lab" >
-      <div class="lab small-centered columns" >
-        <h2>Our mission is to leverage technology in helping our clients build their brand stronger, see our latest thoughts <a href="">here</a></h2>
-      </div>
-    </section>
-
-
-    <section id="projects" class="container" >
-      <!--
-      <div id="firstImage" class="item w4 h4">
-          <h1>Hello World</h1>
-      </div> 
-      -->
-      <div id="firstImage" class="item w2">
-        <h1>Hello World</h1>
-      </div>
-      <div class="item">
-        <h1>Hello World</h1>
-      </div>
-      <div class="item w2 h2">
-        <h1>Hello World</h1>
-      </div>
-      <div class="item w4">
-        <h1>Hello World</h1>
-      </div>
-      <div class="item">
-        <h1>Hello World</h1>
-      </div>
-      <div class="item w2">
-        <h1>Hello World</h1>
-      </div>
-      <div class="item">
-        <h1>Hello World</h1>
-      </div>
-      <!--
-      <div class="item w2 h2">
-        <h1>Hello World</h1>
-      </div>
-      <div class="item">
-        <h1>Hello World</h1>
-      </div>
-      <div class="item">
-        <h1>Hello World</h1>
-      </div>
-      <div class="item">
-        <h1>Hello World</h1>
-      </div>
-      <div class="item w4">
-        <h1>Hello World</h1>
-      </div>
-      <div class="item">
-        <h1>Hello World</h1>
-      </div>
-      <div class="item w2">
-        <h1>Hello World</h1>
-      </div>
-      <div class="item">
-        <h1>Hello World</h1>
-      </div>
-      <div class="item">
-        <h1>Hello World</h1>
-      </div>
-      -->
-    </section>
-
-    <footer class="row">
-      <div class="large-12 columns">
-        <hr>
-        <div class="row">
-          <div class="small-6 columns">
-            <p>© Copyright</p>
-          </div>
-          <div class="small-4 columns">
-            <ul class="inline-list right">
-              <li><a href="#">Link 1</a></li>
-              <li><a href="#">Link 2</a></li>
-            </ul>
-          </div>
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr>
+      <div class="row">
+        <div class="small-6 columns">
+          <p>© Copyright</p>
+        </div>
+        <div class="small-4 columns">
+          <ul class="inline-list right">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+          </ul>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-  <script id="item" type="text/x-jquery-tmpl">
-    <div  id="${id}" class="item w4 h4" style="background-position: center center;
-    background-image: url('${image}');">
-        <h1>Hello World</h1>
-    </div> 
-  </script>
-
+  <!--
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.7/TweenMax.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.7/TweenMax.min.js"></script>
+  -->
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="scripts/vendor/jquery.onepage-scroll.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -166,7 +138,7 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
+
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -178,5 +150,6 @@
     <script src="scripts/home.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+
 </body>
 </html>

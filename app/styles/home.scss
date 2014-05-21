@@ -1,6 +1,42 @@
 
 @import "variables";
 
+html {
+  height: 100%;
+}
+
+body {
+  background: #E2E4E7;
+  padding: 0;
+  position: relative;
+  margin: 0;
+  height: 100%;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+  height: 100% !important;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.main section .page_container {
+  display: table;
+  width: 100%;
+  position: relative;
+  top: 50%;
+  margin: 0 auto 0;
+  z-index: 3;
+}
+
+.main section  {
+  overflow: hidden;
+  padding: 0px 80px 20px 80px;
+}
+
+
 /* intro */
 
 #intro {
@@ -9,11 +45,12 @@
 }
 
 .intro {
-  visibility:hidden;
-  width : 740px;
-  margin: 0 auto;
-  padding: 200px 80px 20px 80px;
 
+  vertical-align: middle;
+
+  visibility:hidden;
+  max-width : 600px;
+  margin: 0 auto;
 
   a, a:hover{
     color:#000;
@@ -32,8 +69,6 @@
   visibility:hidden;
   width : 600px;
   margin: 0 auto;
-  padding: 0px 40px 0px 40px;
-  margin-top: -120px;
 
   h2 {
     display: table-cell;
@@ -54,12 +89,9 @@
 }
 
 .lab {
-
   visibility:hidden;
   width : 680px;
   margin: 0 auto;
-  padding: 0px 40px 0px 40px;
-  // margin-top: -40px;
 
   a, a:hover{
     color:#000;
