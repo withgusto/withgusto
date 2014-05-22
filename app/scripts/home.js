@@ -9,8 +9,7 @@ var $container = $('.container');
 
   var $firstImage = $('#firstImage');
 
-  var ex4 = document.getElementById('projects');
-  // var packery = new Packery( ex4 ,{gutter:20, transitionDuration:'0s'});
+  // var packery = new Packery( document.getElementById('projects') ,{gutter:20, transitionDuration:'0s'});
 
   // packery.on( 'layoutComplete', function() {
   //   $( ".container .item" ).each(function( index ) {
@@ -20,13 +19,14 @@ var $container = $('.container');
   //
   // packery.layout();
 
-$(".main").onepage_scroll({
-  sectionContainer: "section",
-  responsiveFallback: 600,
-  loop: false,
-   easing: "cubic-bezier(0.770, 0.000, 0.175, 1.000)",
-   animationTime: 800,
-});
+  $(".main").onepage_scroll({
+     sectionContainer: "section",
+     responsiveFallback: 600,
+     loop: false,
+     pagination: false,
+     easing: "cubic-bezier(0.770, 0.000, 0.175, 1.000)",
+     animationTime: 800,
+  });
 
   handleResize($( window ).width(), $( window ).height() );
 
@@ -47,15 +47,25 @@ $(".main").onepage_scroll({
     var targetID = event.target.href.split('#')[1];
     var dataSection = $(event.target).data('section');
 
+    $(".main").moveTo(dataSection);
+
+
+    $('.top-bar-section li').each(function(index, value) {
+      $(value).find('a').css({'border-bottom':'2px solid #fff','color':'#222'});
+    });
+
+    if(dataSection === 1){ return; }
+
+    $(event.target).css({'border-bottom':'2px solid #222',  'color':'#222'});
+
     currentSection = targetID;
 
     // setPushState( {title:targetID, href:targetID} );
     // scrollToSection( targetID, 600, null );
-
-    $(".main").moveTo(dataSection);
   });
 
 })();
+
 
 var currentSection = 'intro';
 

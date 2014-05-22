@@ -67,6 +67,17 @@ div.fixed {background:#fff;}
   color:#222;
 }
 
+// .top-bar-section li.active:not(.has-form) a:not(.button):active {
+//   @include transition( all .15s ease-in-out);
+//   @include link-hover-state(#222);
+//   color:#222;
+// }
+
+.activelink {
+  border-bottom: 2px solid #222;
+  color: #222;
+}
+
 /* Logo */
 
 .logo {
