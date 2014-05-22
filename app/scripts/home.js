@@ -50,7 +50,7 @@ var $container = $('.container');
     $(".main").moveTo(dataSection);
 
     $('.top-bar-section li').each(function(index, value) {
-      $(value).find('a').css({'border-bottom':'2px solid #fff','color':'#666'});
+      $(value).find('a').css({'border-bottom':'2px solid transparent','color':'#666'});
     });
 
     if(dataSection === 1){ return; }
