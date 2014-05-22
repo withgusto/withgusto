@@ -49,14 +49,17 @@ var $container = $('.container');
 
     $(".main").moveTo(dataSection);
 
-
     $('.top-bar-section li').each(function(index, value) {
-      $(value).find('a').css({'border-bottom':'2px solid #fff','color':'#222'});
+      $(value).find('a').css({'border-bottom':'2px solid #fff','color':'#666'});
     });
 
     if(dataSection === 1){ return; }
 
     $(event.target).css({'border-bottom':'2px solid #222',  'color':'#222'});
+
+    if(dataSection === 4){
+       $('#projects-nav').css({'border-bottom':'2px solid #222','color':'#222'});
+    }
 
     currentSection = targetID;
 
