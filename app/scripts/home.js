@@ -61,16 +61,28 @@ var $container = $('.container');
        $('#projects-nav').css({'border-bottom':'2px solid #222','color':'#222'});
     }
 
-    currentSection = targetID;
+    currentSection = dataSection;
 
     // setPushState( {title:targetID, href:targetID} );
     // scrollToSection( targetID, 600, null );
   });
+  $('.top-bar-section li a').on('mouseover', function() {
+
+
+    $(this).css({'border-bottom':'2px solid #222',  'color':'#222'});
+
+  }).on('mouseout', function() {
+
+    if( currentSection === $(this).data('section') ){ return }
+    $(this).css({'border-bottom':'2px solid transparent','color':'#666'});
+
+  });
+
 
 })();
 
 
-var currentSection = 'intro';
+var currentSection = 0;
 
 function scrollToSection(section, time, callback) {
 
